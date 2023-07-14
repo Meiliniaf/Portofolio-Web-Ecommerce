@@ -1,0 +1,20 @@
+{% extends 'toko/main.html' %}
+{% load static %}
+{% block content %}
+<br>
+<br>
+<br>
+<div class="container">
+    <div class="flex-container">
+        <form action="">
+            <h4 class="text-center font-weight-bold">Contac Us:</h4>
+            <h4 class="text-center">0213-6789-2345</h4>
+            <br><h5 class="text-center">Jika memiliki kendala silahkan hubungi kami <i class="fa-solid fa-phone-volume"></i></h5>
+            <input type="text" class="name" placeholder="Nama">
+            <p><input type="email" placeholder="Alamat Email"></p>
+            <th><textarea rows="10" placeholder="Pesan"></textarea></th>
+            <th><button>Kirim</button></th>
+        </form>
+    </div>
+</div>
+{%  endblock content %}

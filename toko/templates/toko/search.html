@@ -1,0 +1,23 @@
+<h4 class="text-center font-weight-bold m-4"><span class="text-muted">search result for</span>{{request.GET.q}}</h4>
+        <div class="row">
+          {% for product in products %}
+          <div class="col-lg-4">
+             <img src="{{product.image.url}}" class="thumbnail">
+                 <div class="box-element product">
+                  <h5><strong>{{product.name}}</strong></h5>
+                  <h6><strong>{{product.description}}</strong></h6>
+                  <button data-product={{product.id}}  data-action="add" class="btn btn-outline-secondary add-btn update-cart">Add to Cart</button>
+                  <a class="btn btn-outline-success" href="{% url 'detail' %}">Detail</a>
+                  <h4 style="display: inline-block; float:right">${{product.price|floatformat:2}}</h4>
+                  <div class="rating">
+                    <i class="fas fa-star text-danger"></i>
+                    <i class="fas fa-star text-danger"></i>
+                    <i class="fas fa-star text-danger"></i>
+                    <i class="fas fa-star-half-alt text-danger"></i>
+                    <i class="far fa-star text-danger"></i><br>
+                  </div>
+                  </div>
+          </div>
+          {% endfor %}
+                
+        </div>
